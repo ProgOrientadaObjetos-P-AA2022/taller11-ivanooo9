@@ -9,20 +9,16 @@ public class Ejecutor {
         MenuCarta menuCar1= new MenuCarta("Ceviche de pescado", 2, 1, 2);
         menuCar1.establecerPorcentajeAdicional(10);
         menuCar1.calcularvalorcancelartotal();
-//        System.out.println(menuCar1);
         MenudelDia menudia1= new MenudelDia("Encebollado", 3, 1, 1);
         menudia1.calcularvalorcancelartotal();
-//        System.out.println(menudia1);
         MenuNinos menuninos1= new MenuNinos("Tilapia junior", 2, 1, 1);
         menuninos1.calcularvalorcancelartotal();
-//        System.out.println(menuninos1);
         MenuNinos menuninos2= new MenuNinos("Papas con pollo", 3, 1, 1);
         menuninos2.calcularvalorcancelartotal();
-//        System.out.println(menuninos2);
         MenuEconomico menuEco1= new MenuEconomico("Parillada ", 4);
         menuEco1.establecerPorcentajeDescuento(10);
         menuEco1.calcularvalorcancelartotal();
-//        System.out.println(menuEco1);
+
         
         listamenu.add(menuCar1);
         listamenu.add(menudia1);

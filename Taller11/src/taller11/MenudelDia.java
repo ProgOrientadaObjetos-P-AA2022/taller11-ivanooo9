@@ -1,4 +1,5 @@
 package taller11;
+import Carta.*;
 
 public class MenudelDia extends Menu{
     private double valorPostre;

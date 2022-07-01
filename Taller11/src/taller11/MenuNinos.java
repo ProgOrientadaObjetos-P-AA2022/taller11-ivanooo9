@@ -1,4 +1,5 @@
 package taller11;
+import Carta.*;
 
 public class MenuNinos extends Menu{
     private double valorPorcionHelada;

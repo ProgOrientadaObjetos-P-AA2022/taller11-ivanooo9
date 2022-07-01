@@ -1,4 +1,5 @@
-package taller11;
+
+package Carta;
 
 public abstract class Menu {
 

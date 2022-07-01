@@ -1,5 +1,5 @@
 package taller11;
-
+import Carta.*;
 public class MenuEconomico extends Menu {
 
     private double Descuento;

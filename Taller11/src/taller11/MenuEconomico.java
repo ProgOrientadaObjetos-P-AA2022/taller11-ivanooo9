@@ -3,17 +3,34 @@ import Carta.*;
 public class MenuEconomico extends Menu {
 
     private double Descuento;
-
+    protected String Plato;
+    protected double valorinicialMenu;
+    
+     public void establecerNombrePlato(String Plato) {
+        this.Plato = Plato;
+    }   
+    
+    
     public MenuEconomico() {
 
     }
 
+    public void establecerValorinicialMenu(double valorinicialMenu) {
+        this.valorinicialMenu = valorinicialMenu;
+    }
+
+    
     public MenuEconomico(String nombrePl, double valorinicialM) {
         super(nombrePl, valorinicialM);
         
 
     }
 
+     public String obtenerPlato() {
+        return Plato;
+    }
+    
+    
     public double obtenerDescuento() {
         return Descuento;
     }
@@ -34,8 +51,10 @@ public class MenuEconomico extends Menu {
     public String toString() {
         String cadena = String.format("Menu Economico\n%s", super.toString());
         cadena = String.format("%s"
+                + "Plato%.2f\n"
                 + "Porcentaje descuento%.2f\n"
                 + "Valor Menu:%.2f\n", cadena,
+                obtenerPlato(),
                 obtenerDescuento(),
                 obtenerValorMenu());
         return cadena;
@@ -47,3 +66,10 @@ public class MenuEconomico extends Menu {
     }
 
 }
+
+/*
+Plato: Econo 001
+	Valor Inicial: 4,00
+	Porcentaje Descuento: 25,00
+	Valor del Menú: 3,00
+*/

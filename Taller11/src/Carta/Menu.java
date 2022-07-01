@@ -25,10 +25,7 @@ public abstract class Menu {
         this.valorMenu = valorMenu;
     }
 
-    public void establecerValorinicialMenu(double valorinicialMenu) {
-        this.valorinicialMenu = valorinicialMenu;
-    }
-
+    
     public String obtenerPlato() {
         return Plato;
     }

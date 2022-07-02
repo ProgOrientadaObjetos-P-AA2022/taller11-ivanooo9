@@ -10,7 +10,6 @@ public class MenuEconomico extends Menu {
         this.Plato = Plato;
     }   
     
-    
     public MenuEconomico() {
 
     }
@@ -29,7 +28,10 @@ public class MenuEconomico extends Menu {
      public String obtenerPlato() {
         return Plato;
     }
-    
+     
+     public double obtenerValorinicialMenu() {
+        return valorinicialMenu;
+    }
     
     public double obtenerDescuento() {
         return Descuento;
@@ -52,9 +54,11 @@ public class MenuEconomico extends Menu {
         String cadena = String.format("Menu Economico\n%s", super.toString());
         cadena = String.format("%s"
                 + "Plato%.2f\n"
+                + "Valor Inial:%.2f\n"
                 + "Porcentaje descuento%.2f\n"
                 + "Valor Menu:%.2f\n", cadena,
                 obtenerPlato(),
+                obtenerValorinicialMenu(),
                 obtenerDescuento(),
                 obtenerValorMenu());
         return cadena;
@@ -67,9 +71,3 @@ public class MenuEconomico extends Menu {
 
 }
 
-/*
-Plato: Econo 001
-	Valor Inicial: 4,00
-	Porcentaje Descuento: 25,00
-	Valor del Menú: 3,00
-*/

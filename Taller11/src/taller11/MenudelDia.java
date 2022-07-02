@@ -2,12 +2,23 @@ package taller11;
 import Carta.*;
 
 public class MenudelDia extends Menu{
+    protected String Plato;
     private double valorPostre;
     private double valorBebida;
 
     public MenudelDia(){
-        
+    
     }
+    
+    public void establecerNombrePlato(String Plato) {
+        this.Plato = Plato;
+    }   
+    
+    
+    public void establecerValorinicialMenu(double valorinicialMenu) {
+        this.valorinicialMenu = valorinicialMenu;
+    }
+    
     public MenudelDia(String nombrePl, double valorinicialM,double valpostre, double valbebida){
         super(nombrePl, valorinicialM);
         valorPostre=valpostre;
@@ -22,6 +33,14 @@ public class MenudelDia extends Menu{
         this.valorBebida = valorBebida;
     }
 
+    public String obtenerPlato() {
+      return Plato;
+    }
+    
+    public double obtenerValorinicialMenu() {
+        return valorinicialMenu;
+    }
+    
     public double obtenerValorPostre() {
         return valorPostre;
     }
@@ -41,12 +60,17 @@ public class MenudelDia extends Menu{
     public String toString() {
         String cadena=String.format("Menu del dia\n%s",super.toString());
         cadena=String.format("%s"
-                + "Valor Postre:%.2f\n"
+                + "Plato%.2f\n"
+                + "Valor Inial:%.2f\n"
                 + "Valor Bebida:%.2f\n"
+                + "Valor Postre:%.2f\n"              
                 + "Valor Menu:%.2f\n",cadena,
-                obtenerValorPostre(),
-                obtenerValorBebida(),
+                obtenerPlato(),
+                obtenerValorinicialMenu(),
+                obtenerValorBebida(), 
+                obtenerValorPostre(),      
                 obtenerValorMenu());
+        
         return cadena;
     }
 

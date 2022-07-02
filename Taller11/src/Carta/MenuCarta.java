@@ -2,6 +2,7 @@ package Carta;
 import taller11.*;
 
 public class MenuCarta extends Menu{
+    protected String Plato;
     private double valorporciondeGuarnicion;
     private double valorBebida;
     private double porcentajeAdicional;//en relacion del valor inicial del menu
@@ -9,6 +10,12 @@ public class MenuCarta extends Menu{
     public MenuCarta(){
         
     }
+    
+    public void establecerNombrePlato(String Plato) {
+        this.Plato = Plato;
+    }   
+    
+    
     public MenuCarta(String nombrePl, double valorinicialM,double valorPG, double valorB){
         super(nombrePl, valorinicialM);
         valorporciondeGuarnicion=valorPG;
@@ -32,6 +39,10 @@ public class MenuCarta extends Menu{
         this.valorinicialMenu = valorinicialMenu;
     }
     
+    public String obtenerPlato() {
+      return Plato;
+    }
+     
     public double obtenerValorporciondeGuarnicion() {
         return valorporciondeGuarnicion;
     }
@@ -56,12 +67,14 @@ public class MenuCarta extends Menu{
     public String toString() {
         String cadena=String.format("Menu a la carta\n%s",super.toString());
         cadena=String.format("%s"
+                + "Plato%.2f\n"
                 + "Valor Inial:%.2f\n"
                 + "Valor guarnicion:%.2f\n"
                 + "Valor bebida:%.2f\n"
                 + "Porcentaje Adicional:%.2f\n"
                 + "Valor del menu:%.2f\n", cadena,
-                obtenerValorInicial(),
+                obtenerPlato(), 
+                obtenerValorinicialMenu(),
                 obtenerValorporciondeGuarnicion(),
                 obtenerValorBebida(),
                 obtenerPorcentajeAdicional(),
